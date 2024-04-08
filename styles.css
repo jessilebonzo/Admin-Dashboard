@@ -1,0 +1,394 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Roboto, sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* General styles */
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: auto 1fr;
+}
+z
+.header {
+  grid-column: 2 / -1;
+}
+
+.sidebar {
+  grid-column: 1;
+  grid-row: 1 / -1;
+}
+
+/* SIDEBBAR  */
+.sidebar {
+  background-color:	#ffcb37;
+  padding: 1.8rem;
+}
+
+.sidebar-heading {
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.navigation {
+  display: grid;
+  margin-top: 3.4rem;
+  gap: 1.2rem;
+}
+
+.nav-link,
+.sidebar-heading {
+  font-weight: 600;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+}
+
+.sidebar-heading span,
+.nav-link span {
+  font-size: 1.5rem;
+}
+
+.nav-link,
+.sidebar-heading {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.nav-link {
+  color: #212121;
+}
+
+/* HEADER */
+.header {
+  padding: 0.8rem 2.2rem;
+  box-shadow: 0 3px 5px 0px rgba(191, 191, 191, 0.75);
+  z-index: 10;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+}
+
+.search-container {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+}
+
+.search {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.search > label > span,
+.profile > span {
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.search input {
+  display: inline-block;
+  border: none;
+  background-color: #e2e8f0;
+  padding: 0.5rem 0.8rem;
+  margin-left: 1.25rem;
+  border-radius: 1.4rem;
+  width: min(70%, 550px);
+}
+
+.search input:focus {
+  outline: 1px solid #000;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.profile span {
+  color: #292524;
+}
+
+.profile p {
+  font-weight: bold;
+}
+
+.profile-image {
+  width: 50px;
+  height: 50px;
+  background: url("assets/jess.jpg") center center / cover;
+  border-radius: 50%;
+}
+
+.header-interaction {
+  display: grid;
+  grid-template-columns: 70px 1fr 1fr;
+  align-items: center;
+  margin-top: 1.2rem;
+  gap: 1.1rem;
+}
+
+.interaction-logo {
+  width: 70px;
+  height: 70px;
+  background: url("assets/jess.jpg") center center / cover;
+  border-radius: 50%;
+}
+
+.interaction-post {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.6rem;
+}
+
+.interaction-bold {
+  margin-top: 0.4rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.interaction-post button {
+  margin-top: 0.4rem;
+  min-width: 110px;
+  background: #ffcb37;
+  color: #fff;
+  padding: 0.7rem 2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 1rem;
+}
+
+/* MAIN */
+.content-headings {
+  display: grid;
+  grid-template-columns: 1fr 17rem;
+  margin-bottom: 0.8rem;
+}
+
+.content-headings h3 {
+  font-weight: bold;
+}
+
+.content {
+  padding: 2.4rem 2.2rem;
+  background-color: #e5e7eb;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 17rem;
+  grid-template-rows: 1fr 1fr;
+  gap: 1.2rem;
+}
+.projects {
+  grid-row: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1.4rem;
+}
+
+.announcements {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.trending {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.card {
+  background-color: #fff;
+  padding: 1.6rem;
+  border-left: 9px solid #fb923c;
+  border-radius: 0.3rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  border-left: 9px solid #ffcb37;
+  box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.2);
+}
+
+.content > h3,
+.card > h3 {
+  font-weight: bold;
+}
+
+.card p {
+  margin: 0.4rem 0;
+  line-height: 1.4;
+  color: #6b7280;
+}
+
+.card-icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 100%;
+  gap: 0.8rem;
+}
+
+.card-icons span {
+  background-color: #fff;
+  cursor: pointer;
+  color: #292524;
+  font-size: 1.4rem;
+}
+
+/* ANNOUNCEMENTS */
+.collaboration-container,
+.trending-container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  padding: 1.6rem;
+  gap: 1rem;
+  box-shadow: 0px 4px 6px -1px rgba(189, 187, 189, 1);
+}
+
+.collaboration-paragraph {
+  /* Trick  to limit content to the specified number of lines */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.collaboration-card > h4 {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.collaboration-card span {
+  display: inline-block;
+  width: 100%;
+  border-bottom: 1px solid #cbd5e1;
+}
+
+/* TRENDING */
+.trending > h3 {
+  margin-bottom: 0.8rem;
+  font-weight: bold;
+}
+
+.trending-card {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.account {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.account p {
+  font-size: 1rem;
+}
+
+.account p:hover {
+  color: #fb923c;
+  cursor: pointer;
+}
+
+.account span {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.trending-picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.trending-1 > .trending-picture {
+  background: url("assets/bigboo.png") center center / cover;
+}
+
+.trending-2 > .trending-picture {
+  background: url("assets/zeno.png") center center / cover;
+}
+
+.trending-3 > .trending-picture {
+  background: url("assets/ced.png") center center / cover;
+}
+
+.trending-4 > .trending-picture {
+  background: url("assets/zander.png") center center / cover;
+}
+
+.interaction-logo,
+.profile-image,
+.trending-picture {
+  cursor: pointer;
+  transition: all ease-in 0.15s;
+}
+
+.interaction-logo:hover,
+.profile-image:hover,
+.trending-picture:hover {
+  transform: scale(1.1);
+}
+
+.interaction-button button {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.interaction-button button:hover {
+  box-shadow: 0px 0px 5px 2px #d1d5db;
+}
